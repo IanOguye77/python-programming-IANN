@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes Search Engine - Application</title>
+</head>
+<body>
+    <h2>Welcome To My Recipe Search Engine</h2>
+
+    {% for recipe in recipes %}
+        <img src="{{ recipe.recipe.image }}" alt="LMAO">
+
+        <h5>{{recope.recipe.label}}</h5>
+    {% endfor %}
+</body>
+</html>

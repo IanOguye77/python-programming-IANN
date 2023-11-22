@@ -1,0 +1,38 @@
+Title: Cinema Ticket Booking
+Description: An App where the user can book a cinema seat,
+if the seat is free and if the user has balance in their card.
+The App generates a PDF ticket if the purchase is successful.
+Objects: User, Seat, Ticket, Card
+
+    User:
+        name
+        buy(seat, card)
+    Seat:
+        database = "cinema.db"
+        seat_id
+        price
+        get_price()
+        is_free()
+        occupy()
+    Card:
+        database = "cinema.db"
+        type
+        number
+        cvc
+        holder
+        validate(price)
+    Ticket:
+        id
+        user
+        price
+        seat
+        to_pdf()
+
+// Simple illustration
+user = User("Dennis")
+seat = Seat("A1")
+card = Card("Visa", "123456789")
+user.buy(seat, card)
+
+
+Happy Coding
